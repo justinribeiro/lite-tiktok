@@ -1,4 +1,4 @@
-[![npm version](https://badge.fury.io/js/@justinribeiro%2Flite-youtube.svg)](https://badge.fury.io/js/@justinribeiro%2Flite-youtube) ![min+gzip](https://img.shields.io/badge/min%2Bgzip-2.2kb-blue) ![min+br](https://img.shields.io/badge/min%2Bbr-1.7kb-blue) [![](https://data.jsdelivr.com/v1/package/npm/@justinribeiro/lite-youtube/badge)](https://www.jsdelivr.com/package/npm/@justinribeiro/lite-youtube)
+[![npm version](https://badge.fury.io/js/@justinribeiro%2Flite-tiktok.svg)](https://badge.fury.io/js/@justinribeiro%2Flite-tiktok) ![min+gzip](https://img.shields.io/badge/min%2Bgzip-1.9kb-blue) ![min+br](https://img.shields.io/badge/min%2Bbr-1.5kb-blue) [![](https://data.jsdelivr.com/v1/package/npm/@justinribeiro/lite-tiktok/badge)](https://www.jsdelivr.com/package/npm/@justinribeiro/lite-tiktok)
 
 ![Statements](https://img.shields.io/badge/statements-92.06%25-brightgreen.svg?style=flat) ![Branches](https://img.shields.io/badge/branches-80%25-yellow.svg?style=flat) ![Functions](https://img.shields.io/badge/functions-81.25%25-yellow.svg?style=flat) ![Lines](https://img.shields.io/badge/lines-92.06%25-brightgreen.svg?style=flat)
 
@@ -56,7 +56,7 @@ If you want the paste-and-go version, you can simply load it via CDN:
 
 ## Basic Usage
 
-Note: as I say above, because there is no play event avaiable, this will require a double tap to play. You likely want the IntersectionObserver example below is you want lazy load and single interaction play.
+Note: as I say above, because there is no play event available, this will require a double tap to play. You likely want the IntersectionObserver example below is you want lazy load and single interaction play.
 
 ```html
 <lite-tiktok videoid="7117052937028980014"></lite-tiktok>
@@ -64,10 +64,10 @@ Note: as I say above, because there is no play event avaiable, this will require
 
 ## AutoLoad with IntersectionObserver
 
-Uses Intersection Observer if available to automatically load the YouTube iframe when scrolled into view.
+Uses Intersection Observer if available to automatically load the TikTok iframe when scrolled into view.
 
 ```html
-<lite-tiktok videoid="7117052937028980014" autoload> </lite-tiktok>
+<lite-tiktok videoid="7117052937028980014" autoload></lite-tiktok>
 ```
 
 ## Attributes
@@ -77,5 +77,5 @@ flexibility.
 
 | Name           | Description                                                      | Default |
 | -------------- | ---------------------------------------------------------------- | ------- |
-| `videoid`      | The YouTube videoid                                              | ``      |
+| `videoid`      | The TikTok video id                                              | ``      |
 | `autoload`     | Use Intersection Observer to load iframe when scrolled into view | `false` |
