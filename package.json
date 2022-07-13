@@ -1,0 +1,79 @@
+{
+  "name": "@justinribeiro/lite-tiktok",
+  "description": "A web component that lazy loads TikTok embeds. Currently experimental and a work in progress.",
+  "author": "Justin Ribeiro <justin@justinribeiro.com>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:justinribeiro/lite-tiktok.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "start": "yarn build && yarn web-dev-server --open demo/ --node-resolve",
+    "start:watch": "concurrently --raw \"yarn tsc --watch --preserveWatchOutput\" \"yarn wds --watch --open /demo --node-resolve\"",
+    "lint": "npm run lint:eslint && npm run lint:prettier",
+    "lint:eslint": "eslint *.ts --ignore-path .gitignore",
+    "lint:prettier": "prettier --check *.ts --ignore-path .gitignore",
+    "test": "tsc && wtr --coverage",
+    "test:watch": "tsc && wtr --coverage --watch",
+    "make-test-badges": "yarn istanbul-badges-readme",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "lite-tiktok.d.ts",
+    "lite-tiktok.js",
+    "lite-tiktok.js.map"
+  ],
+  "license": "MIT",
+  "version": "0.0.1",
+  "main": "lite-tiktok.js",
+  "module": "lite-tiktok.js",
+  "types": "lite-tiktok.d.ts",
+  "keywords": [
+    "web components",
+    "tiktok"
+  ],
+  "devDependencies": {
+    "@esm-bundle/chai": "^4.3.4-fix.0",
+    "@open-wc/eslint-config": "^7.0.0",
+    "@open-wc/testing": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "@web/dev-server": "^0.1.24",
+    "@web/test-runner": "^0.13.18",
+    "concurrently": "^7.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "istanbul-badges-readme": "^1.4.0",
+    "prettier": "^2.0.0",
+    "typescript": "^4.7.0"
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+      "@open-wc/eslint-config",
+      "eslint-config-prettier"
+    ],
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "rules": {
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": [
+        "error"
+      ],
+      "import/no-unresolved": "off",
+      "import/extensions": [
+        "error",
+        "always",
+        {
+          "ignorePackages": true
+        }
+      ]
+    }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "arrowParens": "avoid"
+  }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"
+    />
+    <title>lite-tiktok demo</title>
+    <script type="module" src="../lite-tiktok.js"></script>
+    <style>
+      * {
+        box-sizing: content-box;
+      }
+      body {
+        max-width: 800px;
+        margin: auto;
+      }
+      pre {
+        width: 100%;
+        padding: 1em;
+        overflow-x: scroll;
+        background-clip: z;
+        background-color: #eee;
+      }
+      .styleIt {
+        width: 400px;
+      }
+      #bigBlock {
+        height: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>&lt;lite-tiktok&gt; Basic Usage</h3>
+    <pre>
+
+&lt;lite-tiktok videoid=&quot;7117052937028980014&quot;&gt;&lt;/lite-tiktok&gt;
+    </pre>
+    <lite-tiktok videoid="7117052937028980014"></lite-tiktok>
+    <div id="bigBlock"></div>
+    <h3>&lt;lite-tiktok&gt; Intersection Observer</h3>
+    <pre>
+
+&lt;lite-tiktok autoload videoid=&quot;7117052937028980014&quot;&gt;&lt;/lite-tiktok&gt;
+    </pre>
+    <lite-tiktok videoid="7117052937028980014" autoload></lite-tiktok>
+  </body>
+</html>
