@@ -6,6 +6,10 @@
 
 > A web component that lazy loads TikTok embeds. Currently experimental and a work in progress.
 
+## TLDR;
+
+Tiktok's video embed web perf is terrible. See [my basic explainer video as to why](https://www.youtube.com/watch?v=K4MHNR_BIHQ), and keep in mind, I didn't even scratch the surface (ohhhh the performance trace is terrrribbblle).
+
 ## The Problem
 
 TikTok's video embed is truly a nightmare for your web performance. Full stop, do not pass go, cry under your desk.
@@ -51,7 +55,7 @@ import '@justinribeiro/lite-tiktok';
 If you want the paste-and-go version, you can simply load it via CDN:
 
 ```html
-<script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-tiktok@0.0.1/lite-tiktok.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-tiktok@0.1.0/lite-tiktok.js"></script>
 ```
 
 ## Basic Usage
